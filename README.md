@@ -1,6 +1,6 @@
 # Video Audio Cleaner Skill 使用说明
 
-这个 Skill 用来帮助 Agent 处理视频或音频里的声音。它适合小白使用：你只需要告诉 Agent 你想做什么，或者从菜单里选一个操作。
+这个 Skill 用来帮助 Agent 处理视频或音频里的声音。它适合新手使用：你只需要告诉 Agent 你想做什么，或者从菜单里选一个操作。
 
 它可以做这些事情：
 
@@ -106,7 +106,7 @@ python scripts/check_setup.py
 
 FFmpeg 用来从视频里抽出音频，也用来把处理好的音频放回视频。
 
-Windows 小白推荐用 `winget` 安装。打开 PowerShell，然后运行：
+Windows 推荐用 `winget` 安装。打开 PowerShell，然后运行：
 
 ```bash
 winget install --id Gyan.FFmpeg -e
@@ -166,7 +166,7 @@ python -m pip install -U deepfilternet
 
 ### 可选：TorchCodec 与 FFmpeg 8
 
-这个 Skill 默认**不需要安装 TorchCodec**。它直接调用系统里的 `ffmpeg` / `ffprobe` 命令来抽音频和封装视频，这样对小白最稳，也最容易排查问题。
+这个 Skill 默认**不需要安装 TorchCodec**。它直接调用系统里的 `ffmpeg` / `ffprobe` 命令来抽音频和封装视频，这样最稳，也最容易排查问题。
 
 前面版本实际处理时遇到过一个兼容性问题：
 
@@ -197,11 +197,11 @@ python -m pip install -r requirements-optional-torchcodec.txt
 本 Skill 的建议是：
 
 - 只做去人声、提取人声、降噪、封装视频：不用 TorchCodec，直接用 FFmpeg CLI。
-- Windows 小白：先用 `winget install --id Gyan.FFmpeg -e` 安装 FFmpeg，再装 `requirements-windows-known-good.txt`。
+- Windows ：先用 `winget install --id Gyan.FFmpeg -e` 安装 FFmpeg，再装 `requirements-windows-known-good.txt`。
 - 已验证组合：`FFmpeg 8.1.1` + `torch==2.5.1` + `torchaudio==2.5.1`。
 - 要做 PyTorch 张量级音视频处理：再单独研究 TorchCodec 与本机 FFmpeg/PyTorch 的兼容表。
 
-## 最常用的 4 个小白命令
+## 最常用的 4 个命令
 
 ### 去掉视频里的人声
 
