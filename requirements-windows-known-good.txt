@@ -1,0 +1,9 @@
+# Windows known-good dependency set for this skill.
+# Use this when newer torchaudio/torchcodec fails with FFmpeg 8.
+# Verified path from prior troubleshooting: FFmpeg 8.1.1 + torch/torchaudio 2.5.1.
+torch==2.5.1
+torchaudio==2.5.1
+demucs>=4.0.0
+deepfilternet>=0.5.0
+soundfile>=0.12.1
+numpy>=1.23.0

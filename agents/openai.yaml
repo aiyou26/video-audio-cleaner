@@ -1,0 +1,5 @@
+interface:
+  display_name: "Video Audio Cleaner"
+  short_description: "Remove vocals, isolate speech, reduce background music, and denoise video/audio."
+  icon: "headphones"
+  color: "#5468ff"
